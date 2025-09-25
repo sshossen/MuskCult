@@ -6,11 +6,11 @@ import pandas as pd
 
 driver = webdriver.Chrome()
 driver.get('https://www.vivo.com/bd/products')
-time.sleep(5)
+time.sleep(10)
 first_height = driver.execute_script('return document.body.scrollHeight')
 while True:
     driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
-    time.sleep(5)
+    time.sleep(10)
 
     new_height = driver.execute_script('return document.body.scrollHeight')
     if first_height == new_height:
